@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-drag-component@1.0.2/dist/aframe-drag-component.min.js"></script>
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <a-assets>
+        <img id="skys" src="3d-models-1/istockphoto-824800468-612x612.jpg">
+    </a-assets>
+    <a-scene allowvr>
+        <a-box color="#770001"
+               position="0 0 -7"
+               scale="15 1.5 20">
+
+        </a-box>
+        <a-box color="#BC4A3C"
+               position="-5 5 -7"
+               scale="1 12 1">
+        </a-box>
+        
+
+      <!-- Box -->
+      
+
+        <a-box color="#BC4A3C"
+               position="5 5 -7"
+               scale="1 12 1">
+        </a-box>
+
+        <a-box color="#BC4A3C"
+               position="2.7 13 -7"
+               scale="1 7 1"
+               rotation="0 0 50">
+        </a-box>
+
+        <a-box color="#BC4A3C"
+               position="-2.7 13 -7"
+               scale="1 7 1"
+               rotation="0 0 -50">
+        </a-box>
+
+        
+        <a-entity id="parent" swipe-to-attach>
+            <a-cylinder id="shape1"   color="#000000"
+                    scale="0.5 1 0.1"
+                    rotation="0 -90 0"
+                    position="-5 6 -6">
+            </a-cylinder>
+
+            <a-sphere id="shape2"  color="#FFFFFF"
+                  scale="1 1 1"
+                  position="-5 6 -5"
+                  clickable id="sphere">
+            </a-sphere>
+
+            
+        </a-entity>
+        
+        <!-- second attachment-->
+        <a-entity id="parent1">
+            <a-cylinder color="#000000"
+                    scale="0.5 1 0.1"
+                    rotation="0 -90 0"
+                    position="5 6 -6">
+            </a-cylinder>
+
+            <a-triangle color="#FFFFFF"
+                    scale="1.2 1.3 0.5"
+                    position="5 6 -5.45"
+                    clickable id="triangle">
+        </a-triangle>
+        </a-entity>
+        
+
+        <a-cylinder color="#000000"
+                    scale="0.5 1 0.1"
+                    rotation="0 -90 0"
+                    position="5 11 -6">
+        </a-cylinder>
+
+        <a-sphere color="#FFFFFF"
+        scale="1 1 1"
+        position="5 11 -6"
+        clickable id="sphere"></a-sphere>
+        
+
+        <a-cylinder color="#000000"
+                    scale="0.5 1 0.1"
+                    rotation="0 -90 0"
+                    position="-5 11 -6">
+        </a-cylinder>
+
+        <a-box color="#FFFFFF"
+        scale="1 1 1"
+        position="-5 11 -5"
+        clickable id="box">
+
+        </a-box>
+
+
+        <a-cylinder color="#000000"
+                    scale="0.5 1 0.1"
+                    rotation="0 -90 0"
+                    position="0 15 -6">
+        </a-cylinder>
+            objects to be attached
+        
+
+        
+
+        <a-circle color="#FFFFFF"
+                  scale="1 1 1"
+                  position="0 15 -5"
+                  clickable id="circle">
+
+        </a-circle>
+        
+        <a-sky color="#64E986"></a-sky>       
+
+        <a-camera position="0 8 12">
+            <a-cursor id="cursor" raycaster="objects: [clickable]"></a-cursor>
+        </a-camera>           
+    </a-scene>
+    
+</body>
+</html>
